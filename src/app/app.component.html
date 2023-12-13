@@ -2,10 +2,8 @@
 <h1>{{title}}</h1>
 <h2>{{title.length}}</h2>
 
-<app-text-tile title="My First Tile" description="My tile is awesome!"></app-text-tile>
+<app-text-tile #myFirstTile [title]="catName" [description]="catName"></app-text-tile>
 
-<app-text-tile></app-text-tile>
-<app-text-tile></app-text-tile>
-<app-text-tile></app-text-tile>
-<app-text-tile></app-text-tile>
-<app-text-tile></app-text-tile>
+<app-text-tile [description]="getDescription()"></app-text-tile>
+
+<app-list-tile [items]="seconds" (itemClicked)="logMessage($event)"></app-list-tile>

@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-text-tile',
   standalone: true,
@@ -13,5 +12,12 @@ export class TextTileComponent {
   title = 'Text tile title';
 
   @Input()
-  description = 'Text tile description'
+  description = 'Text tile description';
+  constructor() {
+    console.log(`Constructor`)
+  }
+
+  ngOnInit(): void {
+    console.log('ngOnInit')
+  }
 }

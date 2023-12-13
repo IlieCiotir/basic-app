@@ -1,0 +1,4 @@
+<ul>
+    <li *ngFor="let item of items; index as listIndex; first as first; last as last; odd as odd; even as even"
+        (click)="itemSelected(item, listIndex, $event)"> #{{listIndex}} {{item}}</li>
+</ul>
