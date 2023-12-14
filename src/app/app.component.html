@@ -2,8 +2,20 @@
 <h1>{{title}}</h1>
 <h2>{{title.length}}</h2>
 
+<app-anything-tile>
+  <h1>{{title}}</h1>
+  <app-text-tile class="descriere"></app-text-tile>
+  <div>
+    <app-list-tile></app-list-tile>
+  </div>
+</app-anything-tile>
+
 <app-text-tile #myFirstTile [title]="catName" [description]="catName"></app-text-tile>
 
+<app-text-tile appMouseHighlight="green" [description]="getDescription()"></app-text-tile>
+<app-text-tile [description]="getDescription()"></app-text-tile>
+<app-text-tile appMouseHighlight [description]="getDescription()"></app-text-tile>
+<app-text-tile [description]="getDescription()"></app-text-tile>
 <app-text-tile [description]="getDescription()"></app-text-tile>
 
-<app-list-tile [items]="seconds" (itemClicked)="logMessage($event)"></app-list-tile>
+<app-list-tile appMouseHighlight [items]="dataService.items" (itemClicked)="logMessage($event)"></app-list-tile>

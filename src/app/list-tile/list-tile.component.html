@@ -1,4 +1,6 @@
+{{items | json}}
 <ul>
     <li *ngFor="let item of items; index as listIndex; first as first; last as last; odd as odd; even as even"
-        (click)="itemSelected(item, listIndex, $event)"> #{{listIndex}} {{item}}</li>
+        (click)="itemSelected(item, listIndex, $event)"> #{{listIndex}} {{item | number:'0.5-5' | prefix:'EUR':odd +''}}
+    </li>
 </ul>

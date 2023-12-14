@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { PrefixPipe } from '../pipes/prefix.pipe';
 
 @Component({
   selector: 'app-list-tile',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, PrefixPipe],
   templateUrl: './list-tile.component.html',
   styleUrl: './list-tile.component.scss'
 })
